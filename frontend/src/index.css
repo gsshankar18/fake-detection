@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  /* Custom highlight styling */
+  mark {
+    @apply bg-red-200 text-red-900 px-1 rounded font-medium;
+  }
+
+  .dark mark {
+    @apply bg-red-900/50 text-red-100;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+
+  .dark .glass-card {
+    @apply bg-slate-800/70 border-slate-700/50;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+
+  .dark .text-gradient {
+    @apply from-blue-400 to-indigo-400;
+  }
+}
